@@ -7,6 +7,7 @@
         <title>Binar Car Rental - Challenge 1</title>
         <link rel="stylesheet" href="assets/styles/style.css">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     </head>
     <body>
         <div class="content">
@@ -94,47 +95,49 @@
                         <h3>Testimonial</h3>
                         <p>Berbagai review positif dari para pelanggan kami</p>
                     </div>
-                    <div class="list-testi">
-                        <div class="testi">
-                            <div class="testi-img"><img src="assets/img/testi-img1.png" alt="testi-img"></div>
-                            <div class="testi-desc">
-                                <div class="testi-desc-rate"><img src="assets/img/star-rate.svg" alt="star"></div>
-                                <div class="testi-desc-msg">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide testi">
+                                <div class="testi-img"><img src="assets/img/testi-img1.png" alt="testi-img"></div>
+                                <div class="testi-desc">
+                                    <div class="testi-desc-rate"><img src="assets/img/star-rate.svg" alt="star"></div>
+                                    <div class="testi-desc-msg">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”
+                                    </div>
+                                    <div class="testi-desc-profil">
+                                        John Dee 32, Bromo
+                                    </div>
                                 </div>
-                                <div class="testi-desc-profil">
-                                    John Dee 32, Bromo
+                            </div>
+                            <div class="swiper-slide testi">
+                                <div class="testi-img"><img src="assets/img/testi-img1.png" alt="testi-img"></div>
+                                <div class="testi-desc">
+                                    <div class="testi-desc-rate"><img src="assets/img/star-rate.svg" alt="star"></div>
+                                    <div class="testi-desc-msg">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”
+                                    </div>
+                                    <div class="testi-desc-profil">
+                                        John Dee 32, Bromo
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide testi">
+                                <div class="testi-img"><img src="assets/img/testi-img2.png" alt="testi-img"></div>
+                                <div class="testi-desc">
+                                    <div class="testi-desc-rate"><img src="assets/img/star-rate.svg" alt="star"></div>
+                                    <div class="testi-desc-msg">
+                                        “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”
+                                    </div>
+                                    <div class="testi-desc-profil">
+                                        John Dee 32, Bromo
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="testi">
-                            <div class="testi-img"><img src="assets/img/testi-img1.png" alt="testi-img"></div>
-                            <div class="testi-desc">
-                                <div class="testi-desc-rate"><img src="assets/img/star-rate.svg" alt="star"></div>
-                                <div class="testi-desc-msg">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”
-                                </div>
-                                <div class="testi-desc-profil">
-                                    John Dee 32, Bromo
-                                </div>
-                            </div>
+                        <div class="button-testi">
+                            <div class="button-testi-left"><img src="assets/img/Left button.svg" alt="left"></div>
+                            <div class="button-testi-right"><img src="assets/img/Right button.svg" alt="right"></div>
                         </div>
-                        <div class="testi">
-                            <div class="testi-img"><img src="assets/img/testi-img2.png" alt="testi-img"></div>
-                            <div class="testi-desc">
-                                <div class="testi-desc-rate"><img src="assets/img/star-rate.svg" alt="star"></div>
-                                <div class="testi-desc-msg">
-                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”
-                                </div>
-                                <div class="testi-desc-profil">
-                                    John Dee 32, Bromo
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button-testi">
-                        <div class="button-testi-left"><img src="assets/img/Left button.svg" alt="left"></div>
-                        <div class="button-testi-right"><img src="assets/img/Right button.svg" alt="right"></div>
                     </div>
                 </section>
                 <section id="cta-banner" class="shadow">
@@ -203,5 +206,17 @@
         </div>
 
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                spaceBetween: 32,
+                navigation: {
+                  nextEl: ".button-testi-right",
+                  prevEl: ".button-testi-left",
+                },
+            });
+        </script>
     </body>
 </html>
